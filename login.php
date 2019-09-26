@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <meta http-equiv="Refresh" content="0; url=template.html">
     <title>Login submission</title>
 </head>
 <body>
