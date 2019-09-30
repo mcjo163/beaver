@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <meta http-equiv="Refresh" content="0; url=template.html">
+    <meta http-equiv="Refresh" content="0; url=account.html">
     <title>Change Password submission</title>
 </head>
 <body>
