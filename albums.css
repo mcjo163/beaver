@@ -1,0 +1,11 @@
+img.album-cover {
+    width: 100%;
+    height: auto;
+}
+.tracks ol li {
+    font-size: 150%;
+    /*color: dimgray;*/
+}
+.tracks h1 {
+    /*color: dimgray;*/
+}
