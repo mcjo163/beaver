@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="/beaver/sidebar.css">
+    <link rel="stylesheet" href="/beaver/albums.css">
     <link rel="icon" href="/beaver/beaver_icon.ico" type="image">
     <title>Beaver!</title>
 </head>
@@ -18,7 +19,7 @@
 <body>
     <div class="container-fullwidth">
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="albums.html">
                 <img src="/beaver/beaver.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 Beaver
             </a>
@@ -26,17 +27,17 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Following</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Albums</a>
+                        <a class="nav-link" href="albums.html">Albums</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -44,26 +45,26 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <div class="btn-group px-sm-2">
-                    <button type="button" class="btn btn-primary">
-                        Profile
-                    </button>
+                    <a href="/beaver/addAlbum.html" role="button" class="btn btn-outline-primary">Add Album</a>
+                    <a href="/beaver/account.html" role="button" class="btn btn-outline-primary">Profile</a>
                 </div>
             </div>
         </nav>
-        
+
         <div class="container-fluid">
             <div class="row">
-               <div class="col-9">
-                   ContenT!
-               </div>
+                <div class="col-9">
+                    <!-- CONTENT -->
+
+
+                </div>
                 <nav class="col-md-3 d-none d-md-block bg-light sidebar">
                     <div class="sidebar-sticky">
                         <h3>Following</h3>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="following nav-link" href="#">
-                                    <img src="/beaver/album_covers/another_light.jpg" class="float-left"
-                                         style="width: 32%; height: auto">
+                                <a class="following nav-link" href="/beaver/album_pages/another_light.html">
+                                    <img src="/beaver/album_covers/another_light.jpg" class="float-left">
                                     <div>
                                         Another Light<br>
                                         Red Vox
@@ -71,7 +72,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="following nav-link" href="#">
+                                <a class="following nav-link" href="/beaver/album_pages/19.html">
                                     <img src="/beaver/album_covers/19.jpg" class="float-left">
                                     <div>
                                         19<br>
@@ -80,7 +81,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="following nav-link" href="#">
+                                <a class="following nav-link" href="/beaver/album_pages/the_human_condition.html">
                                     <img src="/beaver/album_covers/the_human_condition.jpg" class="float-left">
                                     <div>
                                         The Human Condition<br>
@@ -89,7 +90,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="following nav-link" href="#">
+                                <a class="following nav-link" href="/beaver/album_pages/landmark.html">
                                     <img src="/beaver/album_covers/landmark.jpg" class="float-left">
                                     <div>
                                         Landmark<br>
@@ -98,7 +99,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="following nav-link" href="#">
+                                <a class="following nav-link" href="/beaver/album_pages/am.html">
                                     <img src="/beaver/album_covers/am.jpg" class="float-left">
                                     <div>
                                         AM<br>

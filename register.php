@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <meta http-equiv="Refresh" content="0; url=template.html"><!-- go to homepage -->
+    <meta http-equiv="Refresh" content="0; url=albums.html"><!-- go to homepage -->
     <title>Register submission</title>
 </head>
 <body>

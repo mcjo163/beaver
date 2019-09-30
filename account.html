@@ -19,15 +19,16 @@
 <body>
     <div class="container-fullwidth">
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <a class="navbar-brand" href="#">
-                <a href="template.html"><img src="beaver.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+            <a class="navbar-brand" href="albums.html">
+                <a href="albums.html"><img src="beaver.png" width="30" height="30" class="d-inline-block align-top"
+                        alt=""></a>
                 Beaver
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -45,8 +46,8 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <div class="btn-group px-sm-2">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         Profile
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -56,63 +57,66 @@
                 </div>
             </div>
         </nav>
-        
+
         <div class="container-fluid">
             <div class="row">
-               <div class="col-9">
-                   <div class="container">
-                        <div class = "row">
-                            <h1 class = "col-4">Your Account</h1>
+                <div class="col-9">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="col-4">Your Account</h1>
                         </div>
-                        <div class = "row">
-                            <img class = "col-3" src="profilePic.jpg" alt="" 
-                            height = "30%" width = "20%" >
-                            <div class = "col-9">
+                        <div class="row">
+                            <img class="col-3" src="profilePic.jpg" alt="" height="30%" width="20%">
+                            <div class="col-9">
                                 <h4>Username: SamGulinello</h4>
-<!--                                <a href="#">Change Username</a>-->
+                                <!--                                <a href="#">Change Username</a>-->
                                 <h4>Email: sg1355@messiah.edu</h4>
                                 <a href="change-password.html">Change Password</a>
                             </div>
                         </div>
                         <h1>Your Posts</h1>
-                        <div class = "row">
+                        <div class="row">
                             <div class="col-12">
-                                <div class = "container" id="post">
-                                <a href = "">
-                                <div class="row">
-                                    <img class = "col-2" src="album_covers/19.jpg" alt="" height="90%" width = "10%">
-                                    <div class = "col-7">
-                                        <h4> Adele - 19</h4>
-                                        <p>Album</p>
-                                        <p>I loved this album so much. Adele is the best<br> and super talented. She is just so awesome.</p>
-                                    </div>
-                                    <div class = "col-3">
-                                        <h4>0 comments</h4>
-                                        <h5> Click For More</h5>
-                                    </div>
+                                <div class="container" id="post">
+                                    <a href="/beaver/album_pages/19.html">
+                                        <div class="row">
+                                            <img class="col-2" src="album_covers/19.jpg" alt="" height="90%"
+                                                width="10%">
+                                            <div class="col-7">
+                                                <h4> Adele - 19</h4>
+                                                <p>Album</p>
+                                                <p>I loved this album so much. Adele is the best<br> and super talented.
+                                                    She is just so awesome.</p>
+                                            </div>
+                                            <div class="col-3">
+                                                <h4>0 comments</h4>
+                                                <h5> Click For More</h5>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                </a>
-                                </div>
-                                <div class = "container" id=post>
-                                <a href = "">
-                                <div class="row">
-                                    <img class = "col-2" src="album_covers/am.jpg" alt="" height="90%" width = "10%">
-                                    <div class = "col-7">
-                                        <h4> Arctic Monkeys - AM</h4>
-                                        <p>Album</p>
-                                        <p>The Arctic Monkeys made such an amazing album.<br>Lets talk about that.</p>
-                                    </div>
-                                    <div class = "col-3">
-                                        <h4>0 comments</h4>
-                                        <h5> Click For More</h5>
-                                    </div>
-                                </div>
-                                </a>
+                                <div class="container" id=post>
+                                    <a href="/beaver/album_pages/am.html">
+                                        <div class="row">
+                                            <img class="col-2" src="album_covers/am.jpg" alt="" height="90%"
+                                                width="10%">
+                                            <div class="col-7">
+                                                <h4> Arctic Monkeys - AM</h4>
+                                                <p>Album</p>
+                                                <p>The Arctic Monkeys made such an amazing album.<br>Lets talk about
+                                                    that.</p>
+                                            </div>
+                                            <div class="col-3">
+                                                <h4>0 comments</h4>
+                                                <h5> Click For More</h5>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                   </div>
-               </div>
+                    </div>
+                </div>
                 <nav class="col-md-3 d-none d-md-block bg-light sidebar">
                     <div class="sidebar-sticky">
                         <h3>Following</h3>
@@ -120,7 +124,7 @@
                             <li class="nav-item">
                                 <a class="following nav-link" href="#">
                                     <img src="/beaver/album_covers/another_light.jpg" class="float-left"
-                                         style="width: 32%; height: auto">
+                                        style="width: 32%; height: auto">
                                     <div>
                                         Another Light<br>
                                         Red Vox
