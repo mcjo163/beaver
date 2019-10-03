@@ -3,18 +3,24 @@ h4 {
 
 } 
 
-#post{
+.post{
     border: solid;
     border-width: 2px;
     margin-bottom: 10px;
     
 }
 
-#post img{
+.post img{
     margin-left: 0px;
     padding-left: 0px;
 }
 
-#post a {
+.post a {
     color: black;
+    font-weight: lighter;
+    /*text-decoration: none;*/
+}
+
+.post a:hover {
+    font-weight: normal;
 }

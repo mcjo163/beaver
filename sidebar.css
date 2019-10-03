@@ -3,3 +3,11 @@ a.following img {
     width: 32%;
     height: auto;
 }
+
+a.following {
+    color: black;
+    font-weight: lighter;
+}
+a.following:hover {
+    font-weight: normal;
+}
