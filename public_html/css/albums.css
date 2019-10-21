@@ -1,0 +1,27 @@
+img.album-cover {
+    width: 100%;
+    height: auto;
+}
+.tracks ol li {
+    font-size: 150%;
+    /*color: dimgray;*/
+}
+.tracks h1 {
+    /*color: dimgray;*/
+}
+#following {
+    display: none;
+}
+.following-checkbox:before {
+    background: url(favorite.png) left center no-repeat;
+}
+ul.all-albums {
+    list-style-type: none;
+}
+ul.all-albums li {
+    width: 100%;
+    height: auto;
+}
+h1.albums-header {
+    text-align: center;
+}
