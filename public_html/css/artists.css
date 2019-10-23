@@ -1,0 +1,22 @@
+.artists-header {
+    text-align: center;
+}
+
+.all-artists ul {
+    list-style-type: none;
+}
+
+.artist-albums li {
+    width: 100%;
+    height: auto;
+}
+
+a.artist {
+    color: black;
+    font-weight: lighter;
+}
+
+a.artist:hover {
+    font-weight: normal;
+    text-decoration: none;
+}
