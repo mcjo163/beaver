@@ -1,20 +1,13 @@
-<<<<<<< HEAD:sidebar.css
 a.following img {
     padding-right: 2%;
     width: 32%;
     height: auto;
 }
-
 a.following {
     color: black;
     font-weight: lighter;
 }
 a.following:hover {
     font-weight: normal;
-=======
-a.following img {
-    padding-right: 2%;
-    width: 32%;
-    height: auto;
->>>>>>> structure:public_html/css/sidebar.css
+
 }
