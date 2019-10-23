@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/beaver/public_html/css/sidebar.css">
+    <link rel="icon" href="/beaver/public_html/images/beaver/favicon.ico" type="image">
+    <title>Beaver!</title>
+
+</head>
+
+<body>
+    <div class="container-fullwidth">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <a class="navbar-brand" href="/beaver/public_html/album/albums.html">
+                <img src="/beaver/public_html/images/beaver/beaver.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Beaver
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Following</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/beaver/public_html/album/albums.html">Albums</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div class="btn-group px-sm-2">
+                    <a href="/beaver/public_html/add_album.html" role="button" class="btn btn-outline-primary">Add Album</a>
+                    <a href="/beaver/public_html/account/account.html" role="button" class="btn btn-outline-primary">Profile</a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="row">
+               <div class="col-9">
+                   <form method ="POST" style="margin-top:50px;">
+                    <div class="form-group row">
+                        <label for="cover" class="col-4 col-form-label">Album Cover</label>
+                        <div class="col-8">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                            <p>Select image to upload:&nbsp;</p>
+                            <input id="cover" name="cover" type="file" name="fileToUpload" id="fileToUpload">
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="title" class="col-4 col-form-label">Title</label>
+                        <div class="col-8">
+                          <div class="input-group">
+                            <input id="title" name="title" type="text" value="19" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="artist" class="col-4 col-form-label">Artist</label>
+                        <div class="col-8">
+                          <div class="input-group">
+                            <input id="artist" name="artist" type="text" value="Adele" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="year" class="col-4 col-form-label">Year</label>
+                        <div class="col-8">
+                          <div class="input-group">
+                            <input id="year" name="year" type="text" value="2008" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="textarea" class="col-4 col-form-label">Details</label> 
+                        <div class="col-8">
+                          <textarea id="textarea" name="details" cols="40" rows="5" class="form-control"></textarea>
+                        </div>
+                      </div>
+
+                       <div class="textboxes">
+
+                           <div class="form-group row" id="row-song1">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd1" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(1)">
+                                   <input type="button" id="delete1" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(1)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song1" name="song1" class="form-control" value="Daydreamer"
+                                          placeholder="Song 1">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song2">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd2" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(2)">
+                                   <input type="button" id="delete2" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(2)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song2" name="song2" class="form-control" value="Best For Last"
+                                          placeholder="Song 2">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song3">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd3" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(3)">
+                                   <input type="button" id="delete3" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(3)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song3" name="song3" class="form-control" value="Chasing Pavements"
+                                          placeholder="Song 3">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song4">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd4" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(4)">
+                                   <input type="button" id="delete4" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(4)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song4" name="song4" class="form-control" value="Cold Shoulder"
+                                          placeholder="Song 4">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song5">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd5" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(5)">
+                                   <input type="button" id="delete5" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(5)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song5" name="song5" class="form-control" value="Crazy For You"
+                                          placeholder="Song 5">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song6">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd6" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(6)">
+                                   <input type="button" id="delete6" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(6)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song6" name="song6" class="form-control" value="Melt My Heart To Stone"
+                                          placeholder="Song 6">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song7">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd7" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(7)">
+                                   <input type="button" id="delete7" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(7)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song7" name="song7" class="form-control" value="First Love"
+                                          placeholder="Song 7">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song8">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd8" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(8)">
+                                   <input type="button" id="delete8" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(8)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song8" name="song8" class="form-control" value="Right As Rain"
+                                          placeholder="Song 8">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song9">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd9" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(9)">
+                                   <input type="button" id="delete9" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(9)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song9" name="song9" class="form-control" value="Make You Feel My Love"
+                                          placeholder="Song 9">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song10">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd10" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(10)">
+                                   <input type="button" id="delete10" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(10)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song10" name="song10" class="form-control" value="My Same"
+                                          placeholder="Song 10">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song11">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd11" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(11)">
+                                   <input type="button" id="delete11" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(11)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song11" name="song11" class="form-control" value="Tired"
+                                          placeholder="Song 11">
+                               </div>
+                           </div>
+                           <div class="form-group row" id="row-song12">
+                               <div class="col-4">
+                                   <input type="button" id="btAdd12" value="+" class="btn btn-outline-secondary"
+                                          tabindex="-1" onclick="addSongAfter(12)">
+                                   <input type="button" id="delete12" value="Delete" class="btn btn-danger"
+                                          tabindex="-1" onclick="deleteSong(12)">
+                               </div>
+                               <div class="col-8">
+                                   <input type="text" id="song12" name="song12" class="form-control" value="Hometown Glory"
+                                          placeholder="Song 12">
+                               </div>
+                           </div>
+
+
+
+
+
+                       </div>
+
+                       <div class="form-group row">
+                           <div class="offset-4 col-8">
+                               <input type="button" id="btAddSong" value="+" class="btn btn-outline-secondary"
+                                      onclick="addOnBottom()">
+                           </div>
+                       </div>
+
+                       <div class="form-group row">
+                        <div class="offset-4 col-8">
+                          <button name="submit" type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                      </div>
+                    </form>
+               </div>
+                <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <h3>Following</h3>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="following nav-link" href="/beaver/public_html/album/another_light.html">
+                                    <img src="/beaver/public_html/images/album/another_light.jpg" class="float-left">
+                                    <div>
+                                        Another Light<br>
+                                        Red Vox
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="following nav-link" href="/beaver/public_html/album/19.html">
+                                    <img src="/beaver/public_html/images/album/19.jpg" class="float-left">
+                                    <div>
+                                        19<br>
+                                        Adele
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="following nav-link" href="/beaver/public_html/album/the_human_condition.html">
+                                    <img src="/beaver/public_html/images/album/the_human_condition.jpg" class="float-left">
+                                    <div>
+                                        The Human Condition<br>
+                                        Jon Bellion
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="following nav-link" href="/beaver/public_html/album/landmark.html">
+                                    <img src="/beaver/public_html/images/album/landmark.jpg" class="float-left">
+                                    <div>
+                                        Landmark<br>
+                                        Hippo Campus
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="following nav-link" href="/beaver/public_html/album/am.html">
+                                    <img src="/beaver/public_html/images/album/am.jpg" class="float-left">
+                                    <div>
+                                        AM<br>
+                                        Arctic Monkeys
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    See more following
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+<script>
+    var count = 12;
+
+</script>
+
+
+<script>
+
+    function addSongAfter(number) {
+        addOnBottom();
+
+        for (i = count; i > number + 1; i--) {
+            var shiftText = document.getElementById('song'+(i-1)).value;
+            document.getElementById('song'+i).value = shiftText;
+        }
+        document.getElementById('song'+i).value = "";
+    }
+
+    function deleteSong(number) {
+
+        for (i = number; i < count; i++) {
+            var shiftText = document.getElementById('song'+(i+1)).value;
+            document.getElementById('song'+i).value = shiftText;
+        }
+
+        deleteBottom();
+    }
+
+    function deleteBottom() {
+
+        if (count > 1) {
+            $('#row-song' + count).remove();
+            count--;
+        }
+    }
+
+    function addOnBottom() {
+        count++;
+        $('.textboxes').append(
+            '<div class="form-group row" id="row-song'+count+'">' +
+            '<div class="col-4">' +
+            '<input type="button" id="btAdd'+count+'" value="+" class="btn btn-outline-secondary"' +
+            'tabindex="-1" onclick="addSongAfter('+count+')">\n' +
+            '<input type="button" id="delete'+count+'" value="Delete" class="btn btn-danger"' +
+            'tabindex="-1" onclick="deleteSong('+count+')">' +
+            '</div>' +
+            '<div class="col-8">' +
+            '<input type="text" id="song'+count+'" name="song'+count+'" class="form-control"' +
+            'value="" placeholder="Song '+count+'">' +
+            '</div></div>'
+        );
+    }
+</script>
+</html>
