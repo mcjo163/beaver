@@ -68,7 +68,6 @@
                                 <h5>8 songs</h5>
                                 <h5>4 albums</h5>
                                 <h5>4 artists</h5>
-                                <button type="button" class="btn btn-secondary">Edit</button>
                                 <button type="button" class="btn btn-outline-danger" data-toggle="modal"
                                         data-target="#warningPopup">Delete</button>
                                 <form>
@@ -266,3 +265,15 @@
 </body>
 
 </html>
+    <script>
+        function toggle() {
+            var x = document.getElementById("editButton");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+    </script>
+                                <button type="button" onclick="toggle()" class="btn btn-secondary">Edit</button>

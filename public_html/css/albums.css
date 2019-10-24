@@ -2,23 +2,44 @@ img.album-cover {
     width: 100%;
     height: auto;
 }
+
+.song {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.song:hover{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    }
+
 .tracks ol li {
     font-size: 150%;
     /*color: dimgray;*/
 }
+
 .tracks h1 {
     /*color: dimgray;*/
 }
+
 #following {
     display: none;
 }
 ul.all-albums {
     list-style-type: none;
 }
+
 ul.all-albums li {
     width: 100%;
     height: auto;
 }
+
 h1.albums-header {
     text-align: center;
 }
@@ -32,3 +53,19 @@ h1.albums-header {
 a.edit:hover {
     text-decoration: none;
 }
+
+.button .add{
+    visibility: hidden;
+}
+
+.button:hover .add{
+    visibility: visible;
+}
+.modal-body{
+    font-size: 14px;
+}
+#editButton{
+    display: none;
+}
+
+
