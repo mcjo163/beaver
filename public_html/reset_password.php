@@ -7,5 +7,6 @@
 <?php
     $email = htmlspecialchars($_POST['email']);
     echo "<p>email: $email</p>";
+
 ?>
 </body>

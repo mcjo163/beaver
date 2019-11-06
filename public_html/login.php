@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<head>
-    <meta http-equiv="Refresh" content="0; url=/beaver/public_html/album/albums.html"> <!-- go to homepage -->
-    <title>Login submission</title>
-</head>
-<body>
-<?php
+    <?php
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
-    echo "<p>username: $username <br>password: $password</p>";
-?>
-</body>
+    if($username == "" || $password == ""){
+        include "/Library/WebServer/Documents/beaver/public_html/login_error.html";
+    }else{
+        include "/Library/WebServer/Documents/beaver/public_html/album/albums.html";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
