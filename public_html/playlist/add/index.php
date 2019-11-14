@@ -1,13 +1,12 @@
 <?php
-include "../../private_html/config.php";
+include "../../../private_html/config.php";
 
-//if (empty($_POST)) {
-//    $smarty -> display('new_playlist.tpl');
-//    exit();
-//} else {
-//
-//}
-$playlist = $_POST['playlist'];
+if (empty($_POST)) {
+   $smarty -> display('new_playlist.tpl');
+   exit();
+} else {
+    $playlist = $_POST['playlist'];
+}
 
 // check if all inputs are filled, respond accordingly
 $error = false;
@@ -18,4 +17,7 @@ if (!$playlist) {
 if ($error) {
     $smarty -> display('new_playlist.tpl');
     exit();
+} else {
+    ob_start();
+    header("location: " . WEB_URL . "/account?id=" . $user['id']);
 }

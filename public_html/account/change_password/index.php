@@ -1,5 +1,5 @@
 <?php
-include "../../private_html/config.php";
+include "../../../private_html/config.php";
 
 if (empty($_POST)) {
     $smarty -> display('password_reset.tpl');

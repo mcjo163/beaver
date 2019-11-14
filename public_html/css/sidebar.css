@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 a.following img {
     padding-right: 2%;
     width: 32%;
@@ -9,5 +13,4 @@ a.following {
 }
 a.following:hover {
     font-weight: normal;
-
 }

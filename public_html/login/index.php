@@ -25,32 +25,8 @@ if (empty($_POST)) {
         exit();
     }
 
-    // all inputs filled, so check database for email/hashed password combo
-    $pwHash = hash("sha256", $password);
-
-    $sql = "SELECT User_OID AS ID, Email, First_Name, Last_Name, Gender, `Password`
-                FROM User
-                WHERE Email = '$email'
-                AND `Password` = '$pwHash'";
-
-    $stmt = $pdo -> prepare($sql);
-    $stmt -> execute();
-
-    if (!$stmt->rowCount()) {
-        $smarty -> assign('email', $email);
-        $smarty -> assign("infoMismatch", true);
-        $smarty -> display('login.tpl');
-        exit();
-    }
-
-    // user found!
-    session_start();
-
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    $_SESSION['user'] = serialize($user);
-
     ob_start();
-    header("location: " . WEB_URL);
+    header("location: " . WEB_URL . "/album");
     ob_end_flush();
     exit();
 }
