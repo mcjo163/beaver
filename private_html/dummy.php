@@ -3,13 +3,13 @@
 // accounts
 $accounts = array(
     1 => array(
-        "current" => false,
+        "current" => true,
         "username" => "SamGulinello",
         "email" => "sg1355@messiah.edu",
         "avatar" => "images/profile/user1.jpg"
     ),
     2 => array(
-        "current" => true,
+        "current" => false,
         "username" => "rd1288",
         "email" => "rd1288@messiah.edu",
         "avatar" => "images/profile/user2.jpg"
@@ -194,7 +194,7 @@ $albums = array(
         "user" => "rd1288",
         "posterID" => 2,
         "songs" => array(
-            "Stranded",
+            "Stranded"
         )
     )
 );

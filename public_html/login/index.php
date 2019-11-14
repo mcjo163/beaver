@@ -1,5 +1,5 @@
 <?php
-include "../../private_html/config.inc.php";
+include "../../private_html/config.php";
 // include PRIVATE_PATH . "db.inc.php";
 
 if (empty($_POST)) {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-13 21:47:54
+/* Smarty version 3.1.33, created on 2019-11-13 20:00:18
   from 'C:\Apache24\htdocs\beaver\public_html\templates\account_page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcc7a0ab3d853_97153976',
+  'unifunc' => 'content_5dcca722a64f81_70993226',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8095f794b68a0828df18c9a8d18a6bb9bd7b06a4' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\account_page.tpl',
-      1 => 1573681673,
+      1 => 1573693212,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcc7a0ab3d853_97153976 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dcca722a64f81_70993226 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,21 +28,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15993546625dcc7a0ab2a9b9_93301141', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10390079205dcca722a38921_86861754', "title");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17495684615dcc7a0ab2e6f2_41261179', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16234585945dcca722a40e84_23352830', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "title"} */
-class Block_15993546625dcc7a0ab2a9b9_93301141 extends Smarty_Internal_Block
+class Block_10390079205dcca722a38921_86861754 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_15993546625dcc7a0ab2a9b9_93301141',
+    0 => 'Block_10390079205dcca722a38921_86861754',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_17495684615dcc7a0ab2e6f2_41261179 extends Smarty_Internal_Block
+class Block_16234585945dcca722a40e84_23352830 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_17495684615dcc7a0ab2e6f2_41261179',
+    0 => 'Block_16234585945dcca722a40e84_23352830',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -80,7 +80,10 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <!-- <a href="#">Change Username</a>-->
                 <h4>Email: <?php echo $_smarty_tpl->tpl_vars['account']->value['email'];?>
 </h4>
-                <a href="change_password.html">Change Password</a>
+                <?php if ($_smarty_tpl->tpl_vars['user']->value['username'] == $_smarty_tpl->tpl_vars['account']->value['username']) {?>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/change_password">Change Password</a>
+                <?php }?>
             </div>
         </div>
         <div class="row">
@@ -90,7 +93,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <div class="col-2">
                 <?php if ($_smarty_tpl->tpl_vars['user']->value['username'] == $_smarty_tpl->tpl_vars['account']->value['username']) {?>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/create_playlist.html" class="btn btn-primary">Create New</a>
+/new_playlist" class="btn btn-primary">Create New</a>
                 <?php }?>
             </div>
         </div>

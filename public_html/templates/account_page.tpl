@@ -17,7 +17,9 @@
                 <h4>Username: {$account['username']}</h4>
                 <!-- <a href="#">Change Username</a>-->
                 <h4>Email: {$account['email']}</h4>
-                <a href="change_password.html">Change Password</a>
+                {if $user['username'] == $account['username']}
+                    <a href="{$WEB_URL}/account/change_password">Change Password</a>
+                {/if}
             </div>
         </div>
         <div class="row">
@@ -26,7 +28,7 @@
             </div>
             <div class="col-2">
                 {if $user['username'] == $account['username']}
-                    <a href="{$WEB_URL}/create_playlist.html" class="btn btn-primary">Create New</a>
+                    <a href="{$WEB_URL}/playlist/add" class="btn btn-primary">Create New</a>
                 {/if}
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php
-include "../../private_html/config.inc.php";
+include "../../private_html/config.php";
 
 //if (empty($_POST)) {
 //    $smarty -> display('new_playlist.tpl');
