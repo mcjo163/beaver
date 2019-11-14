@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-13 19:50:07
+/* Smarty version 3.1.33, created on 2019-11-14 02:35:16
   from 'C:\Apache24\htdocs\beaver\public_html\templates\layout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcca4bfa72222_90785622',
+  'unifunc' => 'content_5dccbd64de6f49_13450264',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '67af79aef1290196cacdbad4660bded8be938d5f' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\layout.tpl',
-      1 => 1573692553,
+      1 => 1573698914,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcca4bfa72222_90785622 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dccbd64de6f49_13450264 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -48,7 +48,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
     <link rel="icon" href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
 /images/beaver/favicon.ico" type="image">
     <title><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10257433315dcca4bfa4b790_71488567', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6907262665dccbd64dd4d05_62332784', "title");
 ?>
 </title>
 </head>
@@ -79,8 +79,8 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10257433315dcca4bf
                     </li>
                 </ul>
                 <form action="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/search" method="GET" class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+/search"  method="GET" class="form-inline my-2 my-lg-0" id="search" onsubmit="return validate()">
+                    <input class="form-control mr-sm-2" id="searchBar" type="search" placeholder="Search" aria-label="Search" name="q">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <div class="btn-group px-sm-2">
@@ -98,7 +98,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10257433315dcca4bf
                 <div class="col-9">
 
                     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2954195765dcca4bfa544b5_12878424', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19991289505dccbd64ddc500_80111353', "content");
 ?>
 
 
@@ -168,20 +168,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/js/validate_search.js"><?php echo '</script'; ?>
+>
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10207333555dcca4bfa70ee1_27799052', "scripts");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4166655115dccbd64de6617_75096710', "scripts");
 ?>
 
 </body>
 
 </html><?php }
 /* {block "title"} */
-class Block_10257433315dcca4bfa4b790_71488567 extends Smarty_Internal_Block
+class Block_6907262665dccbd64dd4d05_62332784 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_10257433315dcca4bfa4b790_71488567',
+    0 => 'Block_6907262665dccbd64dd4d05_62332784',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -191,12 +195,12 @@ Beaver!<?php
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_2954195765dcca4bfa544b5_12878424 extends Smarty_Internal_Block
+class Block_19991289505dccbd64ddc500_80111353 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2954195765dcca4bfa544b5_12878424',
+    0 => 'Block_19991289505dccbd64ddc500_80111353',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -204,12 +208,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "content"} */
 /* {block "scripts"} */
-class Block_10207333555dcca4bfa70ee1_27799052 extends Smarty_Internal_Block
+class Block_4166655115dccbd64de6617_75096710 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'scripts' => 
   array (
-    0 => 'Block_10207333555dcca4bfa70ee1_27799052',
+    0 => 'Block_4166655115dccbd64de6617_75096710',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

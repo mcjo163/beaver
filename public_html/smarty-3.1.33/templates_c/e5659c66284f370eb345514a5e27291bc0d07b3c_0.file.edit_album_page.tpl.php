@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-13 22:06:19
+/* Smarty version 3.1.33, created on 2019-11-14 01:42:21
   from 'C:\Apache24\htdocs\beaver\public_html\templates\edit_album_page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcc7e5b4d4db9_06119332',
+  'unifunc' => 'content_5dccb0fd9975e7_77396447',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e5659c66284f370eb345514a5e27291bc0d07b3c' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\edit_album_page.tpl',
-      1 => 1573682777,
+      1 => 1573695738,
       2 => 'file',
     ),
   ),
@@ -20,49 +20,55 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcc7e5b4d4db9_06119332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dccb0fd9975e7_77396447 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3701961985dcc7e5b4c0839_75418196', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7690967365dccb0fd96c998_63755764', "title");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11315098335dcc7e5b4c5bd3_93966851', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18689659055dccb0fd97b010_53874524', "content");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6844787495dcc7e5b4d4481_59756282', "scripts");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20275886685dccb0fd9969d6_68770243', "scripts");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "title"} */
-class Block_3701961985dcc7e5b4c0839_75418196 extends Smarty_Internal_Block
+class Block_7690967365dccb0fd96c998_63755764 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_3701961985dcc7e5b4c0839_75418196',
+    0 => 'Block_7690967365dccb0fd96c998_63755764',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
- Beaver! | Edit <?php echo $_smarty_tpl->tpl_vars['album']->value['title'];?>
- <?php
+
+    Beaver! |
+    <?php if (isset($_smarty_tpl->tpl_vars['album']->value['title'])) {?>
+        Edit <?php echo $_smarty_tpl->tpl_vars['album']->value['title'];?>
+
+    <?php } else { ?>
+        New Album
+    <?php }
 }
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_11315098335dcc7e5b4c5bd3_93966851 extends Smarty_Internal_Block
+class Block_18689659055dccb0fd97b010_53874524 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_11315098335dcc7e5b4c5bd3_93966851',
+    0 => 'Block_18689659055dccb0fd97b010_53874524',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -196,7 +202,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
         <div class="form-group row">
             <div class="offset-4 col-8">
-                <button name="submit" type="submit" class="btn btn-primary">Save Changes</button>
+                <button name="submit" type="submit" class="btn btn-primary">
+                    <?php if (isset($_smarty_tpl->tpl_vars['album']->value)) {?>
+                        Save Changes
+                    <?php } else { ?>
+                        Create Album
+                    <?php }?>
+
+                </button>
             </div>
         </div>
     </form>
@@ -205,12 +218,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "content"} */
 /* {block "scripts"} */
-class Block_6844787495dcc7e5b4d4481_59756282 extends Smarty_Internal_Block
+class Block_20275886685dccb0fd9969d6_68770243 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'scripts' => 
   array (
-    0 => 'Block_6844787495dcc7e5b4d4481_59756282',
+    0 => 'Block_20275886685dccb0fd9969d6_68770243',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

@@ -1,6 +1,13 @@
 {extends file="layout.tpl"}
 
-{block name="title"} Beaver! | Edit {$album['title']} {/block}
+{block name="title"}
+    Beaver! |
+    {if isset($album['title'])}
+        Edit {$album['title']}
+    {else}
+        New Album
+    {/if}
+{/block}
 
 {block name="content"}
 
@@ -104,7 +111,14 @@
         </div>
         <div class="form-group row">
             <div class="offset-4 col-8">
-                <button name="submit" type="submit" class="btn btn-primary">Save Changes</button>
+                <button name="submit" type="submit" class="btn btn-primary">
+                    {if isset($album)}
+                        Save Changes
+                    {else}
+                        Create Album
+                    {/if}
+
+                </button>
             </div>
         </div>
     </form>

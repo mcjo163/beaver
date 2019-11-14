@@ -40,8 +40,8 @@
                         <a class="nav-link" href="{$WEB_URL}/artist">Artists</a>
                     </li>
                 </ul>
-                <form action="{$WEB_URL}/search" method="GET" class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                <form action="{$WEB_URL}/search"  method="GET" class="form-inline my-2 my-lg-0" id="search" onsubmit="return validate()">
+                    <input class="form-control mr-sm-2" id="searchBar" type="search" placeholder="Search" aria-label="Search" name="q">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <div class="btn-group px-sm-2">
@@ -99,6 +99,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="{$WEB_URL}/js/validate_search.js"></script>
     {block name="scripts"}{/block}
 </body>
 
