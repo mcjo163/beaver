@@ -21,14 +21,6 @@ img.album-cover {
     background-color: #f9f9f9;
 }
 
-.playlist-button {
-    display: none;
-}
-
-.song-row:hover .playlist-button {
-    display: block;
-}
-
 .tracks ol li {
     font-size: 150%;
     /*color: dimgray;*/
