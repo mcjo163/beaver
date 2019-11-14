@@ -1,4 +1,27 @@
-<!doctype html>
+<?php
+/* Smarty version 3.1.33, created on 2019-11-13 03:28:23
+  from '/Library/WebServer/Documents/beaver/public_html/templates/new_playlist.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5dcb7857e9e8d9_89430030',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'da9effb761202a66d36a80b0ea67d9c6c64d88c7' => 
+    array (
+      0 => '/Library/WebServer/Documents/beaver/public_html/templates/new_playlist.tpl',
+      1 => 1573615702,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5dcb7857e9e8d9_89430030 (Smarty_Internal_Template $_smarty_tpl) {
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -66,8 +89,12 @@
                         </div>
                     </div>
                 </div>
-
                 <form action="verify_playlist.php" method="post">
+                                        <?php if (isset($_smarty_tpl->tpl_vars['playlist']->value)) {?>
+                        <div class="alert alert-danger my-2 col-4 offset-5" role="alert">
+                            Playlist Name cannot not be empty.
+                        </div>
+                    <?php }?>
                     <div class="form-group row justify-content-md-center">
                         <label for="last_name" class="col-2 col-form-label text-right">Playlist Name</label>
                         <div class="col-4">
@@ -146,15 +173,22 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

@@ -67,5 +67,8 @@ a.edit:hover {
 #editButton{
     display: none;
 }
+.error{
+    color: red;
+}
 
 
