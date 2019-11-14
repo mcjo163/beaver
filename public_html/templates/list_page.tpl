@@ -5,8 +5,14 @@
 {block name="title"}Beaver! | {$list_title} {/block}
 
 {block name="content"}
-    {$half = intdiv(count($albums), 2)}
-    {$cols = array_chunk($albums, $half+1, true)}
+    {$half = 0}
+    {if count($albums) is even}
+        {$half = intdiv(count($albums), 2)}
+    {else}
+        {$half = intdiv(count($albums), 2) + 1}
+    {/if}
+    {$cols = array_chunk($albums, $half, true)}
+
     <div class="row">
         <div class="col">
             <h1 class="albums-header">{$list_title}</h1>
@@ -14,26 +20,16 @@
     </div>
 
     <div class="row">
-        <div class="offset-1 col-5">
-            <ul class="all-albums nav flex-column">
-                {foreach $cols[0] as $id=>$album}
-                    <li class="nav-item">
-                        <a class="following nav-link" href="{$WEB_URL}/album/?id={$id}">
-                            <img src="{$WEB_URL}/{$album['cover']}" class="float-left">
-                            <div>
-                                {$album['title']}<br>
-                                {$album['artist']}
-                            </div>
-                        </a>
-                    </li>
-                {/foreach}
-            </ul>
-        </div>
-        {if isset($cols[1])}
-            <div class="col-5">
-                <ul class="all-albums nav flex-column">
-                    {foreach $cols[1] as $id=>$album}
-                        <li class="nav-item">
+        <div class="offset-1 col-10">
+            <table>
+                <tr>
+                    <th class="list-column"></th>
+                    <th class="list-column"></th>
+                </tr>
+                <tr>
+                    {$countToTwo = 0}
+                    {foreach $albums as $id=>$album}
+                        <td>
                             <a class="following nav-link" href="{$WEB_URL}/album/?id={$id}">
                                 <img src="{$WEB_URL}/{$album['cover']}" class="float-left">
                                 <div>
@@ -41,10 +37,17 @@
                                     {$album['artist']}
                                 </div>
                             </a>
-                        </li>
+                        </td>
+                        {$countToTwo = $countToTwo + 1}
+                        {if $countToTwo == 2}
+                            {$countToTwo = 0}
+                            </tr>
+                            <tr>
+                        {/if}
                     {/foreach}
-                </ul>
-            </div>
-        {/if}
+                </tr>
+            </table>
+
+        </div>
     </div>
 {/block}

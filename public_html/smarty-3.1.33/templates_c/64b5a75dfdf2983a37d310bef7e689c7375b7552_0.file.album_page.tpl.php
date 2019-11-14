@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.33, created on 2019-11-12 20:09:14
+=======
+/* Smarty version 3.1.33, created on 2019-11-13 20:39:42
+>>>>>>> master
   from 'C:\Apache24\htdocs\beaver\public_html\templates\album_page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
+<<<<<<< HEAD
   'unifunc' => 'content_5dcb57ba6aee07_89135606',
+=======
+  'unifunc' => 'content_5dcc6a0e3d3454_47193193',
+>>>>>>> master
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64b5a75dfdf2983a37d310bef7e689c7375b7552' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\album_page.tpl',
+<<<<<<< HEAD
       1 => 1573607351,
+=======
+      1 => 1573677551,
+>>>>>>> master
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5dcb57ba6aee07_89135606 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5dcc6a0e3d3454_47193193 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> master
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,21 +44,37 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
+<<<<<<< HEAD
 $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18903089685dcb57ba68ce86_97110137', "title");
+=======
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14582743205dcc6a0e3bee32_32349220', "title");
+>>>>>>> master
 ?>
 
 
 <?php 
+<<<<<<< HEAD
 $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20192095995dcb57ba6926c9_01405660', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "title"} */
 class Block_18903089685dcb57ba68ce86_97110137 extends Smarty_Internal_Block
+=======
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12459801755dcc6a0e3c44d0_86853310', "content");
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
+}
+/* {block "title"} */
+class Block_14582743205dcc6a0e3bee32_32349220 extends Smarty_Internal_Block
+>>>>>>> master
 {
 public $subBlocks = array (
   'title' => 
   array (
+<<<<<<< HEAD
     0 => 'Block_18903089685dcb57ba68ce86_97110137',
+=======
+    0 => 'Block_14582743205dcc6a0e3bee32_32349220',
+>>>>>>> master
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +85,20 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "title"} */
 /* {block "content"} */
+<<<<<<< HEAD
 class Block_20192095995dcb57ba6926c9_01405660 extends Smarty_Internal_Block
+=======
+class Block_12459801755dcc6a0e3c44d0_86853310 extends Smarty_Internal_Block
+>>>>>>> master
 {
 public $subBlocks = array (
   'content' => 
   array (
+<<<<<<< HEAD
     0 => 'Block_20192095995dcb57ba6926c9_01405660',
+=======
+    0 => 'Block_12459801755dcc6a0e3c44d0_86853310',
+>>>>>>> master
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -80,8 +120,15 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 </h4>
                 <h4><?php echo $_smarty_tpl->tpl_vars['album']->value['year'];?>
 </h4>
+<<<<<<< HEAD
                 <h4>Added by <?php echo $_smarty_tpl->tpl_vars['album']->value['user'];?>
 </h4>
+=======
+                <h4>Added by <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/account/?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['posterID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['album']->value['user'];?>
+</a></h4>
+>>>>>>> master
 
                 <form>
                     <div class="custom-control custom-checkbox">
@@ -94,7 +141,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 </form>
 
                 <?php if ($_smarty_tpl->tpl_vars['album']->value['user'] == $_smarty_tpl->tpl_vars['user']->value['username']) {?>
+<<<<<<< HEAD
                     <a href="edit_19.html">
+=======
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/album/edit/?id=<?php echo $_smarty_tpl->tpl_vars['albumID']->value;?>
+">
+>>>>>>> master
                         <button type="button" class="btn btn-secondary">
                             Edit
                         </button>
@@ -131,8 +184,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         <thead>
                         <tr>
                             <th scope="col" style="width: 15%">#</th>
+<<<<<<< HEAD
                             <th scope="col" style="width: 80%">Song</th>
                             <th scope="col" style="width: 5%"></th>
+=======
+                            <th scope="col" style="width: 85%">Song</th>
+>>>>>>> master
                         </tr>
                         </thead>
                         <tbody>
@@ -154,12 +211,15 @@ $__foreach_song_0_saved = $_smarty_tpl->tpl_vars['song'];
 
                                         </button>
                                     </td>
+<<<<<<< HEAD
                                     <td>
                                         <button type="button" class="btn btn-sm btn-primary playlist-button" data-toggle="modal" data-target="#play<?php echo $_smarty_tpl->tpl_vars['song']->iteration;?>
 ">
                                             +
                                         </button>
                                     </td>
+=======
+>>>>>>> master
                                 </tr>
                                 <div class="modal fade" id="song<?php echo $_smarty_tpl->tpl_vars['song']->iteration;?>
 " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -197,6 +257,7 @@ $__foreach_song_0_saved = $_smarty_tpl->tpl_vars['song'];
                                         </div>
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 <div class="modal fade" id="play<?php echo $_smarty_tpl->tpl_vars['song']->iteration;?>
 " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -224,6 +285,8 @@ $__foreach_song_0_saved = $_smarty_tpl->tpl_vars['song'];
                                         </div>
                                     </div>
                                 </div>
+=======
+>>>>>>> master
                             <?php
 $_smarty_tpl->tpl_vars['song'] = $__foreach_song_0_saved;
 }
@@ -231,7 +294,11 @@ $_smarty_tpl->tpl_vars['song'] = $__foreach_song_0_saved;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </tbody>
                     </table>
+<<<<<<< HEAD
                 </div>    
+=======
+                                                    </div>     
+>>>>>>> master
         </div>
     </div>
 <?php

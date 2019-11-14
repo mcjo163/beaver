@@ -77,7 +77,14 @@ a.edit:hover {
 #editButton{
     display: none;
 }
+.error{
+    color: red;
+}
 
 .song {
     text-align: left;
+}
+
+th.list-column {
+    width: 50%;
 }

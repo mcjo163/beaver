@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.33, created on 2019-11-12 20:15:04
+=======
+/* Smarty version 3.1.33, created on 2019-11-13 21:55:11
+>>>>>>> master
   from 'C:\Apache24\htdocs\beaver\public_html\templates\layout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
+<<<<<<< HEAD
   'unifunc' => 'content_5dcb59189d1632_53453471',
+=======
+  'unifunc' => 'content_5dcc7bbf1b5d35_87205376',
+>>>>>>> master
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '67af79aef1290196cacdbad4660bded8be938d5f' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\layout.tpl',
+<<<<<<< HEAD
       1 => 1573607671,
+=======
+      1 => 1573682109,
+>>>>>>> master
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5dcb59189d1632_53453471 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5dcc7bbf1b5d35_87205376 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> master
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -42,10 +58,20 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 /css/albums.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
 /css/artists.css">
+<<<<<<< HEAD
     <link rel="icon" href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
 /images/beaver/favicon.ico" type="image">
     <title><?php 
 $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15739687835dcb59189bd731_64098477', "title");
+=======
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/css/account.css">
+
+    <link rel="icon" href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/images/beaver/favicon.ico" type="image">
+    <title><?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_849964095dcc7bbf1a86f7_16053727', "title");
+>>>>>>> master
 ?>
 </title>
 </head>
@@ -75,16 +101,28 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15739687835dcb5918
 /artist">Artists</a>
                     </li>
                 </ul>
+<<<<<<< HEAD
                 <form action="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
 /search" method="GET" class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+=======
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+>>>>>>> master
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <div class="btn-group px-sm-2">
                     <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+<<<<<<< HEAD
 /add_album.html" role="button" class="btn btn-outline-primary">Add Album</a>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
 /account/account.html" role="button" class="btn btn-outline-primary">Profile</a>
+=======
+/album/add/" role="button" class="btn btn-outline-primary">Add Album</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/account/?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+" role="button" class="btn btn-outline-primary">Profile</a>
+>>>>>>> master
                 </div>
             </div>
         </nav>
@@ -94,7 +132,11 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15739687835dcb5918
                 <div class="col-9">
 
                     <?php 
+<<<<<<< HEAD
 $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_685851715dcb59189c7cd8_18793341', "content");
+=======
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17670232825dcc7bbf1ad944_36597086', "content");
+>>>>>>> master
 ?>
 
 
@@ -164,16 +206,31 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"><?php echo '</script'; ?>
 >
+<<<<<<< HEAD
+=======
+    <?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17920038555dcc7bbf1b5625_40281730', "scripts");
+?>
+
+>>>>>>> master
 </body>
 
 </html><?php }
 /* {block "title"} */
+<<<<<<< HEAD
 class Block_15739687835dcb59189bd731_64098477 extends Smarty_Internal_Block
+=======
+class Block_849964095dcc7bbf1a86f7_16053727 extends Smarty_Internal_Block
+>>>>>>> master
 {
 public $subBlocks = array (
   'title' => 
   array (
+<<<<<<< HEAD
     0 => 'Block_15739687835dcb59189bd731_64098477',
+=======
+    0 => 'Block_849964095dcc7bbf1a86f7_16053727',
+>>>>>>> master
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -183,16 +240,40 @@ Beaver!<?php
 }
 /* {/block "title"} */
 /* {block "content"} */
+<<<<<<< HEAD
 class Block_685851715dcb59189c7cd8_18793341 extends Smarty_Internal_Block
+=======
+class Block_17670232825dcc7bbf1ad944_36597086 extends Smarty_Internal_Block
+>>>>>>> master
 {
 public $subBlocks = array (
   'content' => 
   array (
+<<<<<<< HEAD
     0 => 'Block_685851715dcb59189c7cd8_18793341',
+=======
+    0 => 'Block_17670232825dcc7bbf1ad944_36597086',
+>>>>>>> master
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block "content"} */
+<<<<<<< HEAD
+=======
+/* {block "scripts"} */
+class Block_17920038555dcc7bbf1b5625_40281730 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'scripts' => 
+  array (
+    0 => 'Block_17920038555dcc7bbf1b5625_40281730',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+}
+}
+/* {/block "scripts"} */
+>>>>>>> master
 }

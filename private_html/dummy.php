@@ -1,12 +1,26 @@
 <?php // dummy site info to test smarty before database implementation
 
-// user info
-$user = array(
-    "username" => "SamGulinello",
-    "email" => "sg1355@messiah.edu",
-    "avatar" => "images/profile/profile_pic.jpg",
+// accounts
+$accounts = array(
+    1 => array(
+        "current" => false,
+        "username" => "SamGulinello",
+        "email" => "sg1355@messiah.edu",
+        "avatar" => "images/profile/user1.jpg"
+    ),
+    2 => array(
+        "current" => true,
+        "username" => "rd1288",
+        "email" => "rd1288@messiah.edu",
+        "avatar" => "images/profile/user2.jpg"
+    ),
+    3 => array(
+        "current" => false,
+        "username" => "MicahJ",
+        "email" => "mj1262@messiah.edu",
+        "avatar" => "images/profile/user3.jpg"
+    )
 );
-
 
 // albums
 $albums = array(
@@ -17,6 +31,7 @@ $albums = array(
         "year" => "2008",
         "following" => true,
         "user" => "SamGulinello",
+        "posterID" => 1,
         "songs" => array(
             "Daydreamer",
             "Best For Last",
@@ -39,6 +54,7 @@ $albums = array(
         "year" => "1975",
         "following" => false,
         "user" => "MicahJ",
+        "posterID" => 1,
         "songs" => array(
             "Death On Two Legs",
             "Lazing On A Sunday Afternoon",
@@ -61,6 +77,7 @@ $albums = array(
         "year" => "2013",
         "following" => true,
         "user" => "SamGulinello",
+        "posterID" => 1,
         "songs" => array(
             "Do I Wanna Know?",
             "R U Mine?",
@@ -83,6 +100,7 @@ $albums = array(
         "year" => "2017",
         "following" => true,
         "user" => "rd1288",
+        "posterID" => 2,
         "songs" => array(
             "Another Light",
             "Settle for Less",
@@ -106,6 +124,7 @@ $albums = array(
         "year" => "2018",
         "following" => false,
         "user" => "rd1288",
+        "posterID" => 2,
         "songs" => array(
             "False Direction",
             "Can I Call You Tonight?",
@@ -124,6 +143,7 @@ $albums = array(
         "year" => "2017",
         "following" => true,
         "user" => "rd1288",
+        "posterID" => 2,
         "songs" => array(
             "Sun Veins",
             "Way It Goes",
@@ -147,6 +167,7 @@ $albums = array(
         "year" => "2016",
         "following" => true,
         "user" => "MicahJ",
+        "posterID" => 3,
         "songs" => array(
             "He Is The Same",
             "80's Films",
@@ -163,8 +184,57 @@ $albums = array(
             "Guillotine",
             "Hand Of God - Outro"
         )
+    ),
+    8 => array(
+        "title" => "Stranded",
+        "cover" => "images/album/stranded.jpg",
+        "artist" => "Red Vox",
+        "year" => "2018",
+        "following" => false,
+        "user" => "rd1288",
+        "posterID" => 2,
+        "songs" => array(
+            "Stranded",
+        )
     )
 );
+
+// playlists
+$playlists = array(
+    1 => array(
+        "title" => "Sam's Cool Playlist",
+        "user" => "SamGulinello",
+        "albumCount" => 4,
+        "artistCount" => 4,
+        "songs" => array(
+            1 => array("Daydreamer", "19", "Adele"),
+            2 => array("Melt My Heart To Stone", "19", "Adele"),
+            3 => array("Hometown Glory", "19", "Adele"),
+            4 => array("Memento Mori", "Another Light", "Red Vox"),
+            5 => array("From the Stars", "Another Light", "Red Vox"),
+            6 => array("You're My Best Friend", "A Night At The Opera", "Queen"),
+            7 => array("Bohemian Rhapsody", "A Night At The Opera", "Queen"),
+            8 => array("Fireside", "AM", "Arctic Monkeys")
+        )
+    ),
+    2 => array(
+        "title" => "Robbie's Ultimate Single Song Playlist",
+        "user" => "rd1288",
+        "albumCount" => 1,
+        "artistCount" => 1,
+        "songs" => array(
+            1 => array("In the Garden", "Another Light", "Red Vox")
+        )
+    )
+);
+// get array of logged in user
+foreach ($accounts as $id=>$account) {
+    if ($account['current']) {
+        $user = $account;
+        $user['id'] = $id;
+        break;
+    }
+}
 
 // generate favorites from albums
 $following = array();
@@ -177,12 +247,22 @@ $user['following'] = $following;
 
 // generate 'my posts' array from albums
 $my_posts = array();
-foreach ($albums as $album) {
-    if ($album['user'] == $user) {
-        array_push($my_posts, $album);
+foreach ($albums as $id=>$album) {
+    if ($album['user'] == $user['username']) {
+        $my_posts[$id] = $album;
     }
 }
 $user['posts'] = $my_posts;
+
+// generate 'my playlists' array from playlists
+$my_playlists = array();
+foreach($playlists as $playlist) {
+    if ($playlist['user'] == $user['username']) {
+        array_push($my_playlists, $playlist);
+    }
+}
+$user['playlists'] = $my_playlists;
+
 
 // generate artists array from albums
 $artists = array();
@@ -212,6 +292,26 @@ function get_albums($artist, $album_list) {
     foreach ($album_list as $id=>$album) {
         if ($album['artist'] == $artist) {
             $result[$id] = $album;
+        }
+    }
+    return $result;
+}
+// gets an account's posts
+function get_posts($account, $album_list) {
+    $result = array();
+    foreach ($album_list as $id=>$album) {
+        if ($album['user'] == $account) {
+            $result[$id] = $album;
+        }
+    }
+    return $result;
+}
+// gets an account's playlists
+function get_playlists($account, $playlist_list) {
+    $result = array();
+    foreach ($playlist_list as $id=>$playlist) {
+        if ($playlist['user'] == $account) {
+            $result[$id] = $playlist;
         }
     }
     return $result;
