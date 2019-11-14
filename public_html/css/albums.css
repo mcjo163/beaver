@@ -9,15 +9,17 @@ img.album-cover {
     padding: 0;
     cursor: pointer;
     color: black;
-    font-size: 24px;
     text-decoration: none;
 }
 
-.song:hover{
-    font-weight: bold;
-    color: black;
+.song:hover, .song:active, .song:visited, .song:any-link {
     text-decoration: none;
-    }
+    color: #333333;
+}
+
+.song-row:hover {
+    background-color: #f9f9f9;
+}
 
 .tracks ol li {
     font-size: 150%;
@@ -71,4 +73,10 @@ a.edit:hover {
     color: red;
 }
 
+.song {
+    text-align: left;
+}
 
+th.list-column {
+    width: 50%;
+}

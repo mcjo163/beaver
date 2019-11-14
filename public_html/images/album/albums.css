@@ -1,0 +1,75 @@
+img.album-cover {
+    width: 100%;
+    height: auto;
+}
+
+.song {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.song:hover, .song:active, .song:visited, .song:any-link {
+    text-decoration: none;
+    color: #333333;
+}
+
+.song-row:hover {
+    background-color: #f9f9f9;
+}
+
+.tracks ol li {
+    font-size: 150%;
+    /*color: dimgray;*/
+}
+
+.tracks h1 {
+    /*color: dimgray;*/
+}
+
+#following {
+    display: none;
+}
+ul.all-albums {
+    list-style-type: none;
+}
+
+ul.all-albums li {
+    width: 100%;
+    height: auto;
+}
+
+h1.albums-header {
+    text-align: center;
+}
+.playlist ul {
+    list-style-type: none;
+
+}
+.playlist ul li {
+    font-size: 150%;
+}
+a.edit:hover {
+    text-decoration: none;
+}
+
+.button .add{
+    visibility: hidden;
+}
+
+.button:hover .add{
+    visibility: visible;
+}
+.modal-body{
+    font-size: 14px;
+}
+#editButton{
+    display: none;
+}
+
+.song {
+    text-align: left;
+}
