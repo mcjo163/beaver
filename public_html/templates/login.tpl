@@ -17,9 +17,9 @@
                 <form action="." method="POST">
                     <div class="form-group">
                         {* if the email and password do not match *}
-                        {if isset($infoMismatch)}
+                        {if isset($infoError)}
                             <div class="alert alert-danger my-2" role="alert">
-                                Email and password do not match.
+                                Incorrect email or password.
                             </div>
                         {/if}
                         <label for="email">Email</label>

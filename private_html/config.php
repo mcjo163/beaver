@@ -28,3 +28,12 @@ $smarty -> assign('WEB_URL', WEB_URL);
 
 // for development
 include PRIVATE_PATH . 'dummy.php';
+
+// redirect to login if not logged in and not on login page
+session_start();
+if (!isset($login_page) && !isset($_SESSION['user'])) {
+    ob_start();
+    header("location: " . WEB_URL . "/login");
+    ob_end_flush();
+    exit();
+}

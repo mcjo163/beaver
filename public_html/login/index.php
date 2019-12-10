@@ -1,6 +1,7 @@
 <?php
+$login_page = true;
 include "../../private_html/config.php";
-// include PRIVATE_PATH . "db.inc.php";
+include PRIVATE_PATH . "db.inc.php";
 
 if (empty($_POST)) {
     $smarty -> display('login.tpl');
@@ -24,6 +25,31 @@ if (empty($_POST)) {
         $smarty -> display('login.tpl');
         exit();
     }
+
+    // check if user is in the database
+    $hpw = hash("sha256", $password);
+
+    $sql = "SELECT *
+            FROM `User`
+            WHERE `email_address` = :email AND `hashed_password` = :hpw";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":hpw", $hpw);
+
+    $stmt->execute();
+
+    // if no user match found
+    if (!$stmt->rowCount()) {
+        $smarty -> assign('infoError', true);
+        $smarty -> assign('email', $email);
+        $smarty -> display('login.tpl');
+        exit();
+    }
+
+    // user logged in
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $_SESSION['user'] = serialize($user);
 
     ob_start();
     header("location: " . WEB_URL . "/album");
