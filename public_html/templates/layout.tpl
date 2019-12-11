@@ -60,7 +60,7 @@
                 </div>
                 <nav class="col-md-3 d-none d-md-block bg-light sidebar">
                     <div class="sidebar-sticky">
-                        <h3>Following</h3>
+                        <h3>Favorites</h3>
                         <ul class="nav flex-column">
                             {foreach $user['following'] as $id=>$album}
                                 <li class="nav-item">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-13 20:04:30
+/* Smarty version 3.1.33, created on 2019-12-10 13:39:41
   from 'C:\Apache24\htdocs\beaver\public_html\templates\register.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcca81ec7c6b3_85823963',
+  'unifunc' => 'content_5defe66d1ad826_40718645',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f04d507d64a79956742cdf519dd6ad1c948c0a8' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\register.tpl',
-      1 => 1573693468,
+      1 => 1576003171,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcca81ec7c6b3_85823963 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5defe66d1ad826_40718645 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -43,13 +43,31 @@ function content_5dcca81ec7c6b3_85823963 (Smarty_Internal_Template $_smarty_tpl)
         <div class="col-sm-6 offset-md-3 py-3 rounded bg-light shadow">
             <h1>Create an Account</h1>
             <form action="" method="POST">
+                <?php if (isset($_smarty_tpl->tpl_vars['infoConflict']->value)) {?>
+                    <div class="alert alert-danger" role="alert">
+                        A user with this username or email address already exists.
+                    </div>
+                <?php }?>
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control" id="username" placeholder="username">
+                    <input type="text" name="username" class="form-control" id="username" placeholder="username"
+                    <?php if (isset($_smarty_tpl->tpl_vars['username']->value)) {?> value="<?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+"<?php }?>>
                 </div>
                                 <?php if (isset($_smarty_tpl->tpl_vars['emptyUsername']->value)) {?>
                     <div class="alert alert-danger my-2" role="alert">
                         Username cannot not be empty.
+                    </div>
+                <?php }?>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="email"
+                    <?php if (isset($_smarty_tpl->tpl_vars['email']->value)) {?> value="<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+"<?php }?>>
+                </div>
+                                <?php if (isset($_smarty_tpl->tpl_vars['emptyEmail']->value)) {?>
+                    <div class="alert alert-danger my-2" role="alert">
+                        Email cannot not be empty.
                     </div>
                 <?php }?>
                 <div class="form-group">
@@ -75,15 +93,6 @@ function content_5dcca81ec7c6b3_85823963 (Smarty_Internal_Template $_smarty_tpl)
                 <?php if (isset($_smarty_tpl->tpl_vars['noMatch']->value)) {?>
                     <div class="alert alert-danger my-2" role="alert">
                         Passwords must match.
-                    </div>
-                <?php }?>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="email">
-                </div>
-                                <?php if (isset($_smarty_tpl->tpl_vars['emptyEmail']->value)) {?>
-                    <div class="alert alert-danger my-2" role="alert">
-                        Email cannot not be empty.
                     </div>
                 <?php }?>
                 <button type="submit" class="btn btn-primary">Create Account</button>
