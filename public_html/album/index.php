@@ -17,13 +17,15 @@ if (!count($_GET) || $_GET['id'] > $albums->rowCount()) {
 
     $smarty -> display('list_page.tpl');
 } else {
-    $sql = 'SELECT * FROM album JOIN artist on artist_id = artist_fk JOIN user ON user_id = user_fk WHERE album_id = ' . $_GET['id'];
+    $sql = 'SELECT * FROM album JOIN artist on artist_id = artist_fk JOIN user ON user_id = user_fk WHERE album_id = :id';
     $stmt = $pdo -> prepare($sql);
+    $stmt -> bindParam(":id", $_GET['id']);
     $stmt -> execute();
     $album = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    $sql = 'SELECT * FROM song WHERE album_fk = ' . $_GET['id'] . ' ORDER BY song_order';
+    $sql = 'SELECT * FROM song WHERE album_fk = :id ORDER BY song_order';
     $songs = $pdo -> prepare($sql);
+    $songs -> bindParam(":id", $_GET['id']);
     $songs -> execute();
 
 

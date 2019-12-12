@@ -1,7 +1,6 @@
 <?php
 include '../../private_html/config.php';
 include PRIVATE_PATH . 'db.inc.php';
-
 include PRIVATE_PATH . "generate_following.php";
 
 
