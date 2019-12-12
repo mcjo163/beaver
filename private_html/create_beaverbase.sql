@@ -84,8 +84,8 @@ INSERT INTO user (username, email_address, hashed_password) VALUES
 
 INSERT INTO album (user_fk, artist_fk, album_name, release_year) VALUES
 (1, 1, "19", 2008),
-(2, 3, "Fuzzybrain", 2018),
 (1, 2, "AM", 2013),
+(2, 3, "Fuzzybrain", 2018),
 (2, 4, "Landmark", 2017),
 (3, 5, "The Human Condition", 2016),
 (3, 6, "A Night At The Opera", 1975),
