@@ -1,33 +1,49 @@
 <?php
 include "../../private_html/config.php";
+include PRIVATE_PATH . 'db.inc.php';
 
 $query = htmlspecialchars($_GET['q']);
 
-$smarty -> assign('albums', $albums);
 $smarty -> assign('user', $user);
 $smarty -> assign('query', $query);
 
+// get album results from db
+$sql = "SELECT album_id, album_name, artist_name 
+        FROM album
+            JOIN artist ON artist_fk = artist_id
+        WHERE album_name LIKE '%$query%'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
 $album_results = array();
-foreach ($albums as $id=>$album) {
-    if (is_match($query, $album['title'])) {
-        $album_results[] = $id;
-    }
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $album_results[] = $row;
 }
+
+// get artist results from db
+$sql = "SELECT *
+        FROM artist
+        WHERE artist_name LIKE '%$query%'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
 
 $artist_results = array();
-foreach ($artists as $artist) {
-    if (is_match($query, $artist)) {
-        $artist_results[] = $artist;
-    }
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $artist_results[] = $row;
 }
 
+// get song results from db
+$sql = "SELECT song_name, album_id, album_name, artist_name 
+        FROM song 
+            JOIN album ON album_fk = album_id 
+            JOIN artist ON artist_fk = artist_id 
+        WHERE song_name LIKE '%$query%'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
 $song_results = array();
-foreach ($albums as $id=>$album) {
-    foreach ($album['songs'] as $song) {
-        if (is_match($query, $song)) {
-            $song_results[] = array($song, $id);
-        }
-    }
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $song_results[] = $row;
 }
 
 $smarty -> assign('album_results', $album_results);

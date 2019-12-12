@@ -13,8 +13,8 @@
             <div class="col">
                 <h3>Albums</h3>
                 <ul>
-                    {foreach $album_results as $id}
-                        <li><a href="{$WEB_URL}/album?id={$id}">{$albums[$id]['title']} - {$albums[$id]['artist']}</a></li>
+                    {foreach $album_results as $album}
+                        <li><a href="{$WEB_URL}/album?id={$album['album_id']}">{$album['album_name']} - {$album['artist_name']}</a></li>
                     {/foreach}
                 </ul>
             </div>
@@ -26,7 +26,7 @@
             <h3>Artists</h3>
             <ul>
                 {foreach $artist_results as $artist}
-                    <li><a href="{$WEB_URL}/artist?a={$artist}">{$artist}</a></li>
+                    <li><a href="{$WEB_URL}/artist?a={$artist['artist_id']}">{$artist['artist_name']}</a></li>
                 {/foreach}
             </ul>
         </div>
@@ -38,8 +38,8 @@
             <h3>Songs</h3>
             <ul>
                 {foreach $song_results as $song}
-                    <li><a href="{$WEB_URL}/album?id={$song[1]}">{$song[0]} 
-                    ({$albums[$song[1]]['title']} - {$albums[$song[1]]['artist']})</a></li>
+                    <li><a href="{$WEB_URL}/album?id={$song['album_id']}">{$song['song_name']} 
+                    ({$song['album_name']} - {$song['artist_name']})</a></li>
                 {/foreach}
             </ul>
         </div>
