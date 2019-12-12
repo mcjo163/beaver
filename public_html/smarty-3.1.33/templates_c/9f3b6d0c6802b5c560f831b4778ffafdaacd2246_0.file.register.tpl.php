@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-13 04:02:56
+/* Smarty version 3.1.33, created on 2019-12-11 05:47:46
   from '/Library/WebServer/Documents/beaver/public_html/templates/register.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcb80705f33a9_81179056',
+  'unifunc' => 'content_5df083020d0697_56237681',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f3b6d0c6802b5c560f831b4778ffafdaacd2246' => 
     array (
       0 => '/Library/WebServer/Documents/beaver/public_html/templates/register.tpl',
-      1 => 1573617705,
+      1 => 1573699069,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcb80705f33a9_81179056 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df083020d0697_56237681 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -87,7 +87,8 @@ function content_5dcb80705f33a9_81179056 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 <?php }?>
                 <button type="submit" class="btn btn-primary">Create Account</button>
-                <p class="float-right pr-2">Already have an account? <a href=".">Log in!</a></p>
+                <p class="float-right pr-2">Already have an account? <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/login">Log in!</a></p>
             </form>
         </div>
     </div>

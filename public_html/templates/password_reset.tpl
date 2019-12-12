@@ -19,7 +19,7 @@
     <div class="row mt-5">
         <div class="col-sm-6 offset-md-3 py-3 rounded bg-light shadow">
             <h1>Reset Password</h1>
-            <form action="/beaver/public_html/change_password/" method="POST">
+            <form action="/beaver/public_html/account/change_password/?id={$id}" method="POST">
                 {* if the email and password do not match *}
                 {if isset($noMatch)}
                     <div class="alert alert-danger my-2" role="alert">

@@ -13,13 +13,15 @@
         <div class="row">
             <img class="col-3" src="{$WEB_URL}/{$account['avatar']}" alt=""
                  height="30%" width="20%">
-            <div class="col-9">
+            <div class="col-4">
                 <h4>Username: {$account['username']}</h4>
                 <!-- <a href="#">Change Username</a>-->
                 <h4>Email: {$account['email']}</h4>
-                {if $user['username'] == $account['username']}
-                    <a href="{$WEB_URL}/account/change_password">Change Password</a>
-                {/if}
+                {if $user['username'] == $account}
+                    <a href="{$WEB_URL}/account/change_password/?id={$id}">Change Password</a>
+                    <a href = "{$WEB_URL}/logout/" style = "padding-left: 5px;"> Log Out</a>
+                 {/if}
+
             </div>
         </div>
         <div class="row">

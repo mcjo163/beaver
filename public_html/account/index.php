@@ -16,8 +16,4 @@ $smarty -> assign('playlists', $userPlaylists);
 $posts = get_posts($account['username'], $albums);
 $smarty -> assign('posts', $posts);
 
-
-
-
 $smarty -> display('account_page.tpl');
-

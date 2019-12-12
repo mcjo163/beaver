@@ -29,7 +29,7 @@ $smarty -> assign('WEB_URL', WEB_URL);
 // for development
 include PRIVATE_PATH . 'dummy.php';
 
-// redirect to login if not logged in and not on login page
+ //redirect to login if not logged in and not on login page
 session_start();
 
 if (isset($_SESSION['user'])) {

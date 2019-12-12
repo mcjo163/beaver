@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-14 00:03:24
+/* Smarty version 3.1.33, created on 2019-12-11 00:21:28
   from '/Library/WebServer/Documents/beaver/public_html/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcc99cc0f4967_89717345',
+  'unifunc' => 'content_5df0368867af96_21570882',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '783a832943bef82a51aceca3c363fe0377f8bad2' => 
     array (
       0 => '/Library/WebServer/Documents/beaver/public_html/templates/login.tpl',
-      1 => 1573689797,
+      1 => 1576003743,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcc99cc0f4967_89717345 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df0368867af96_21570882 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -39,9 +39,9 @@ function content_5dcc99cc0f4967_89717345 (Smarty_Internal_Template $_smarty_tpl)
                 <h1>Welcome!</h1>
                 <form action="." method="POST">
                     <div class="form-group">
-                                                <?php if (isset($_smarty_tpl->tpl_vars['infoMismatch']->value)) {?>
+                                                <?php if (isset($_smarty_tpl->tpl_vars['infoError']->value)) {?>
                             <div class="alert alert-danger my-2" role="alert">
-                                Email and password do not match.
+                                Incorrect email or password.
                             </div>
                         <?php }?>
                         <label for="email">Email</label>

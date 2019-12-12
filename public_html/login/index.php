@@ -1,5 +1,7 @@
 <?php
 $login_page = true;
+//session_start();
+
 include "../../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
@@ -50,9 +52,10 @@ if (empty($_POST)) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     $_SESSION['user'] = serialize($user);
+    $_SESSION['id'] = $user['user_id'];
 
     ob_start();
-    header("location: " . WEB_URL . "/album");
+    header("location: " . WEB_URL . "/album/");
     ob_end_flush();
     exit();
 }
