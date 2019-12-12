@@ -33,7 +33,7 @@ include PRIVATE_PATH . 'dummy.php';
 session_start();
 
 if (isset($_SESSION['user'])) {
-    $smarty -> assign('user', unserialize($_SESSION['user']));
+    $smarty -> assign('currentUser', unserialize($_SESSION['user']));
 }
 
 if (!isset($login_page) && !isset($_SESSION['user'])) {

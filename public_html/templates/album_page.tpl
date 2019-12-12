@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <a href="{$WEB_URL}/album/delete/?id={$albumID}">
+                                    <a href="{$WEB_URL}/album/delete/?id={$album['album_id']}">
                                         <button type="submit" class="btn btn-outline-danger">Delete</button>
                                     </a>
                                 </div>

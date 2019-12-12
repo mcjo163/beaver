@@ -11,14 +11,14 @@
             <h1 class="col-4">My Profile</h1>
         </div>
         <div class="row">
-            <img class="col-3" src="{$WEB_URL}/{$account['avatar']}" alt=""
+            <img class="col-3" src="{$WEB_URL}/images/profile/user{$account['user_id']}.jpg" alt=""
                  height="30%" width="20%">
             <div class="col-4">
                 <h4>Username: {$account['username']}</h4>
                 <!-- <a href="#">Change Username</a>-->
-                <h4>Email: {$account['email']}</h4>
-                {if $user['username'] == $account}
-                    <a href="{$WEB_URL}/account/change_password/?id={$id}">Change Password</a>
+                <h4>Email: {$account['email_address']}</h4>
+                {if $account['user_id'] == $currentUser['user_id']}
+                    <a href="{$WEB_URL}/account/change_password/?id={$account['user_id']}">Change Password</a>
                     <a href = "{$WEB_URL}/logout/" style = "padding-left: 5px;"> Log Out</a>
                  {/if}
 
@@ -29,7 +29,7 @@
                 <h1>My Playlists</h1>
             </div>
             <div class="col-2">
-                {if $user['username'] == $account['username']}
+                {if $account['user_id'] == $currentUser['user_id']}
                     <a href="{$WEB_URL}/playlist/add" class="btn btn-primary">Create New</a>
                 {/if}
             </div>

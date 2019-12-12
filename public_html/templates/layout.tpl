@@ -47,7 +47,7 @@
                 </form>
                 <div class="btn-group px-sm-2">
                     <a href="{$WEB_URL}/album/add/" role="button" class="btn btn-outline-primary">Add Album</a>
-                    <a href="{$WEB_URL}/account/?id={$user['user_id']}" role="button" class="btn btn-outline-primary">Profile</a>
+                    <a href="{$WEB_URL}/account/?id={$currentUser['user_id']}" role="button" class="btn btn-outline-primary">Profile</a>
                 </div>
             </div>
         </nav>

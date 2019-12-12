@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-13 19:58:51
+/* Smarty version 3.1.33, created on 2019-12-12 01:31:04
   from 'C:\Apache24\htdocs\beaver\public_html\templates\password_reset.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcca6cb3a58e6_16975029',
+  'unifunc' => 'content_5df1985887fbd1_60388405',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c864ab558d98f7c02bfd8f828305e5713b719536' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\password_reset.tpl',
-      1 => 1573691148,
+      1 => 1576112687,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcca6cb3a58e6_16975029 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df1985887fbd1_60388405 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -42,7 +42,8 @@ function content_5dcca6cb3a58e6_16975029 (Smarty_Internal_Template $_smarty_tpl)
     <div class="row mt-5">
         <div class="col-sm-6 offset-md-3 py-3 rounded bg-light shadow">
             <h1>Reset Password</h1>
-            <form action="/beaver/public_html/change_password/" method="POST">
+            <form action="/beaver/public_html/account/change_password/?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+" method="POST">
                                 <?php if (isset($_smarty_tpl->tpl_vars['noMatch']->value)) {?>
                     <div class="alert alert-danger my-2" role="alert">
                         New passwords do not match.

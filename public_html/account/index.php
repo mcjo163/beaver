@@ -5,10 +5,21 @@ include PRIVATE_PATH . 'db.inc.php';
 include PRIVATE_PATH . "generate_following.php";
 
 
-$smarty -> assign('user', $user);
 
-$account = $accounts[$_GET['id']];
-$smarty -> assign('account', $account);
+$account = unserialize($_SESSION['user']);
+if ($_GET['id'] == $account['user_id']) {
+    $smarty -> assign('account', $account);
+
+} else {
+    $sql = "SELECT * FROM user WHERE user_id = :id";
+    $stmt = $pdo -> prepare($sql);
+    $stmt ->bindParam(":id", $_GET['id']);
+    $stmt -> execute();
+
+    $account = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $smarty -> assign('account', $account);
+
+}
 
 $userPlaylists = get_playlists($account['username'], $playlists);
 $smarty -> assign('playlists', $userPlaylists);

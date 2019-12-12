@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-12 01:33:30
-  from 'C:\Apache24\htdocs\beaver\public_html\templates\account_page.tpl' */
+/* Smarty version 3.1.33, created on 2019-12-12 01:16:56
+  from 'C:\Apache24\htdocs\beaver\public_html\templates\profile_page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5df198ea155724_01888522',
+  'unifunc' => 'content_5df19508cb79a4_07685353',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8095f794b68a0828df18c9a8d18a6bb9bd7b06a4' => 
+    '300ae96171f16155428d22ba6ae96b4a8d777897' => 
     array (
-      0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\account_page.tpl',
-      1 => 1576114407,
+      0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\profile_page.tpl',
+      1 => 1576112687,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5df198ea155724_01888522 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5df19508cb79a4_07685353 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,21 +28,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19158537855df198ea138f45_96052272', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10446465115df19508c8f544_90338964', "title");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12129671255df198ea13e1f7_60344430', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21192949075df19508c96f33_39654615', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "title"} */
-class Block_19158537855df198ea138f45_96052272 extends Smarty_Internal_Block
+class Block_10446465115df19508c8f544_90338964 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_19158537855df198ea138f45_96052272',
+    0 => 'Block_10446465115df19508c8f544_90338964',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_12129671255df198ea13e1f7_60344430 extends Smarty_Internal_Block
+class Block_21192949075df19508c96f33_39654615 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_12129671255df198ea13e1f7_60344430',
+    0 => 'Block_21192949075df19508c96f33_39654615',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -71,23 +71,19 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         </div>
         <div class="row">
             <img class="col-3" src="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/images/profile/user<?php echo $_smarty_tpl->tpl_vars['account']->value['user_id'];?>
-.jpg" alt=""
+/<?php echo $_smarty_tpl->tpl_vars['account']->value['avatar'];?>
+" alt=""
                  height="30%" width="20%">
             <div class="col-4">
-                <h4>Username: <?php echo $_smarty_tpl->tpl_vars['account']->value['username'];?>
+                <h4>Username: <?php echo $_smarty_tpl->tpl_vars['account']->value;?>
 </h4>
                 <!-- <a href="#">Change Username</a>-->
-                <h4>Email: <?php echo $_smarty_tpl->tpl_vars['account']->value['email_address'];?>
+                <h4>Email: <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 </h4>
-                <?php if ($_smarty_tpl->tpl_vars['account']->value['user_id'] == $_smarty_tpl->tpl_vars['currentUser']->value['user_id']) {?>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/account/change_password/?id=<?php echo $_smarty_tpl->tpl_vars['account']->value['user_id'];?>
+/account/change_password/?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ">Change Password</a>
-                    <a href = "<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/logout/" style = "padding-left: 5px;"> Log Out</a>
-                 <?php }?>
-
+                    <a href = "/beaver/public_html/logout/" style = "padding-left: 5px;"> Log Out</a>
             </div>
         </div>
         <div class="row">
@@ -95,18 +91,25 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <h1>My Playlists</h1>
             </div>
             <div class="col-2">
-                <?php if ($_smarty_tpl->tpl_vars['account']->value['user_id'] == $_smarty_tpl->tpl_vars['currentUser']->value['user_id']) {?>
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+                <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
 /playlist/add" class="btn btn-primary">Create New</a>
-                <?php }?>
             </div>
         </div>
         <div class="row">
             <div class="col-10 offset-1">
-                <?php if (sizeof($_smarty_tpl->tpl_vars['playlists']->value) == 0) {?>
+                <!-- <?php if (sizeof($_smarty_tpl->tpl_vars['playlist']->value) == 0) {?>
+                    <p>No playlists</p>
+                <?php }?> -->
+                <?php if (isset($_smarty_tpl->tpl_vars['noPlaylist']->value)) {?>
                     <p>No playlists</p>
                 <?php }?>
-                <?php
+                <?php if (!isset($_smarty_tpl->tpl_vars['noPlaylist']->value)) {?>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
+/playlist/?id=<?php echo $_smarty_tpl->tpl_vars['playlistID']->value;?>
+" class="lead playlist"><?php echo $_smarty_tpl->tpl_vars['playlistName']->value;?>
+</a>
+                <?php }?>
+                <!-- <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['playlists']->value, 'playlist', false, 'id');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['id']->value => $_smarty_tpl->tpl_vars['playlist']->value) {
@@ -115,7 +118,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['id']->value => $_smarty_tpl->tpl_vars
                         <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
 /playlist/?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 "
-                           class="lead playlist"><?php echo $_smarty_tpl->tpl_vars['playlist']->value['title'];?>
+                           class="lead playlist"><?php echo $_smarty_tpl->tpl_vars['playlistName']->value;?>
  - 1 song</a>
                     <?php } else { ?>
                         <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
@@ -129,7 +132,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['id']->value => $_smarty_tpl->tpl_vars
                 <?php
 }
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> -->
             </div>
         </div>
         <div class="row">
@@ -139,9 +142,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
         <div class="row">
             <div class="col-12">
-                <?php if (sizeof($_smarty_tpl->tpl_vars['posts']->value) == 0) {?>
+               <!--  <?php if (sizeof($_smarty_tpl->tpl_vars['posts']->value) == 0) {?>
                     <p>No posts</p>
-                <?php }?>
+                <?php }?> -->
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['posts']->value, 'post', false, 'id');
 if ($_from !== null) {

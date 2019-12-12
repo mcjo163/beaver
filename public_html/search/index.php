@@ -6,7 +6,6 @@ include PRIVATE_PATH . "generate_following.php";
 
 $query = htmlspecialchars($_GET['q']);
 
-$smarty -> assign('user', $user);
 $smarty -> assign('query', $query);
 
 // get album results from db
