@@ -31,6 +31,11 @@ include PRIVATE_PATH . 'dummy.php';
 
 // redirect to login if not logged in and not on login page
 session_start();
+
+if (isset($_SESSION['user'])) {
+    $smarty -> assign('user', unserialize($_SESSION['user']));
+}
+
 if (!isset($login_page) && !isset($_SESSION['user'])) {
     ob_start();
     header("location: " . WEB_URL . "/login");
