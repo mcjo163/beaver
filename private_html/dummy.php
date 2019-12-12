@@ -26,7 +26,7 @@ $accounts = array(
 $albums = array(
     1 => array(
         "title" => "19",
-        "cover" => "/images/album/19.jpg",
+        "cover" => "/images/album/1.jpg",
         "artist" => "Adele",
         "year" => "2008",
         "following" => true,
@@ -49,7 +49,7 @@ $albums = array(
     ),
     2 => array(
         "title" => "A Night At The Opera",
-        "cover" => "/images/album/a_night_at_the_opera.jpg",
+        "cover" => "/images/album/6.jpg",
         "artist" => "Queen",
         "year" => "1975",
         "following" => false,
@@ -72,7 +72,7 @@ $albums = array(
     ),
     3 => array(
         "title" => "AM",
-        "cover" => "images/album/am.jpg",
+        "cover" => "images/album/2.jpg",
         "artist" => "Arctic Monkeys",
         "year" => "2013",
         "following" => true,
@@ -95,7 +95,7 @@ $albums = array(
     ),
     4 => array(
         "title" => "Another Light",
-        "cover" => "images/album/another_light.jpg",
+        "cover" => "images/album/7.jpg",
         "artist" => "Red Vox",
         "year" => "2017",
         "following" => true,
@@ -119,7 +119,7 @@ $albums = array(
     ),
     5 => array(
         "title" => "Fuzzybrain",
-        "cover" => "images/album/fuzzybrain.jpg",
+        "cover" => "images/album/3.jpg",
         "artist" => "Dayglow",
         "year" => "2018",
         "following" => false,
@@ -138,7 +138,7 @@ $albums = array(
     ),
     6 => array(
         "title" => "Landmark",
-        "cover" => "images/album/landmark.jpg",
+        "cover" => "images/album/4.jpg",
         "artist" => "Hippo Campus",
         "year" => "2017",
         "following" => true,
@@ -162,7 +162,7 @@ $albums = array(
     ),
     7 => array(
         "title" => "The Human Condition",
-        "cover" => "images/album/the_human_condition.jpg",
+        "cover" => "images/album/5.jpg",
         "artist" => "Jon Bellion",
         "year" => "2016",
         "following" => true,
@@ -187,7 +187,7 @@ $albums = array(
     ),
     8 => array(
         "title" => "Stranded",
-        "cover" => "images/album/stranded.jpg",
+        "cover" => "images/album/8.jpg",
         "artist" => "Red Vox",
         "year" => "2018",
         "following" => false,

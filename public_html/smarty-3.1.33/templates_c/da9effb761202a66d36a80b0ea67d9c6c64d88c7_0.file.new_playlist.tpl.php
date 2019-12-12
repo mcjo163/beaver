@@ -116,7 +116,7 @@ function content_5dcb7857e9e8d9_89430030 (Smarty_Internal_Template $_smarty_tpl)
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="following nav-link" href="/beaver/public_html/album/another_light.html">
-                                <img src="/beaver/public_html/images/album/another_light.jpg" class="float-left">
+                                <img src="/beaver/public_html/images/album/7.jpg" class="float-left">
                                 <div>
                                     Another Light<br>
                                     Red Vox
@@ -125,7 +125,7 @@ function content_5dcb7857e9e8d9_89430030 (Smarty_Internal_Template $_smarty_tpl)
                         </li>
                         <li class="nav-item">
                             <a class="following nav-link" href="/beaver/public_html/album/19.html">
-                                <img src="/beaver/public_html/images/album/19.jpg" class="float-left">
+                                <img src="/beaver/public_html/images/album/1.jpg" class="float-left">
                                 <div>
                                     19<br>
                                     Adele
@@ -134,7 +134,7 @@ function content_5dcb7857e9e8d9_89430030 (Smarty_Internal_Template $_smarty_tpl)
                         </li>
                         <li class="nav-item">
                             <a class="following nav-link" href="/beaver/public_html/album/the_human_condition.html">
-                                <img src="/beaver/public_html/images/album/the_human_condition.jpg" class="float-left">
+                                <img src="/beaver/public_html/images/album/5.jpg" class="float-left">
                                 <div>
                                     The Human Condition<br>
                                     Jon Bellion
@@ -143,7 +143,7 @@ function content_5dcb7857e9e8d9_89430030 (Smarty_Internal_Template $_smarty_tpl)
                         </li>
                         <li class="nav-item">
                             <a class="following nav-link" href="/beaver/public_html/album/landmark.html">
-                                <img src="/beaver/public_html/images/album/landmark.jpg" class="float-left">
+                                <img src="/beaver/public_html/images/album/4.jpg" class="float-left">
                                 <div>
                                     Landmark<br>
                                     Hippo Campus
@@ -152,7 +152,7 @@ function content_5dcb7857e9e8d9_89430030 (Smarty_Internal_Template $_smarty_tpl)
                         </li>
                         <li class="nav-item">
                             <a class="following nav-link" href="/beaver/public_html/album/am.html">
-                                <img src="/beaver/public_html/images/album/am.jpg" class="float-left">
+                                <img src="/beaver/public_html/images/album/2.jpg" class="float-left">
                                 <div>
                                     AM<br>
                                     Arctic Monkeys

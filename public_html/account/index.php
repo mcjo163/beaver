@@ -1,6 +1,7 @@
 <?php
 include '../../private_html/config.php';
 
+
 $smarty -> assign('user', $user);
 
 $account = $accounts[$_GET['id']];

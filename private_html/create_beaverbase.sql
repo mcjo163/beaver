@@ -188,7 +188,8 @@ INSERT INTO user_favorite_album (user_fk, album_fk) VALUES
 (1, 2),
 (1, 4),
 (1, 5),
-(1, 7);
+(1, 7),
+(2, 8);
 
 INSERT INTO playlist_song (playlist_fk, song_fk, order_in_playlist) VALUES
 (1, 1, 1),

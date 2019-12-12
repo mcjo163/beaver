@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-13 19:50:26
+/* Smarty version 3.1.33, created on 2019-12-10 18:37:06
   from 'C:\Apache24\htdocs\beaver\public_html\templates\album_page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dcca4d2d0b2e2_61438200',
+  'unifunc' => 'content_5defe5d29a8a06_32289431',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64b5a75dfdf2983a37d310bef7e689c7375b7552' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\beaver\\public_html\\templates\\album_page.tpl',
-      1 => 1573692624,
+      1 => 1576003023,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dcca4d2d0b2e2_61438200 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5defe5d29a8a06_32289431 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,37 +28,37 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7984111505dcca4d2ce4596_37681665', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12235824135defe5d298a829_76994304', "title");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15194939775dcca4d2ceb595_00750696', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5346693685defe5d298fb36_74018521', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "title"} */
-class Block_7984111505dcca4d2ce4596_37681665 extends Smarty_Internal_Block
+class Block_12235824135defe5d298a829_76994304 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_7984111505dcca4d2ce4596_37681665',
+    0 => 'Block_12235824135defe5d298a829_76994304',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
- Beaver! | <?php echo $_smarty_tpl->tpl_vars['album']->value['title'];?>
+ Beaver! | <?php echo $_smarty_tpl->tpl_vars['album']->value['album_name'];?>
  <?php
 }
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_15194939775dcca4d2ceb595_00750696 extends Smarty_Internal_Block
+class Block_5346693685defe5d298fb36_74018521 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_15194939775dcca4d2ceb595_00750696',
+    0 => 'Block_5346693685defe5d298fb36_74018521',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,35 +69,35 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div class="row">
             <div class="col-4">
                 <img class="album-cover" src="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['album']->value['cover'];?>
-">
+/images/album/<?php echo $_smarty_tpl->tpl_vars['album']->value['album_id'];?>
+.jpg">
             </div>
 
             <div class="col-8">
-                <h1 class="display-3"><?php echo $_smarty_tpl->tpl_vars['album']->value['title'];?>
+                <h1 class="display-3"><?php echo $_smarty_tpl->tpl_vars['album']->value['album_name'];?>
 </h1>
-                <h4><?php echo $_smarty_tpl->tpl_vars['album']->value['artist'];?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['album']->value['artist_name'];?>
 </h4>
-                <h4><?php echo $_smarty_tpl->tpl_vars['album']->value['year'];?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['album']->value['release_year'];?>
 </h4>
                 <h4>Added by <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/account/?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['posterID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['album']->value['user'];?>
+/account/?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['user_fk'];?>
+"><?php echo $_smarty_tpl->tpl_vars['album']->value['username'];?>
 </a></h4>
 
                 <form>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="following" name="follow"
-                        <?php if (in_array($_smarty_tpl->tpl_vars['album']->value,$_smarty_tpl->tpl_vars['user']->value['following'])) {?> checked <?php }?>>
+                        <?php if (in_array($_smarty_tpl->tpl_vars['album']->value['album_id'],$_smarty_tpl->tpl_vars['favorite']->value)) {?> checked <?php }?>>
                         <label class="custom-control-label" for="following">
                             <strong>Follow this album</strong>
                         </label>
                     </div>
                 </form>
 
-                <?php if ($_smarty_tpl->tpl_vars['album']->value['user'] == $_smarty_tpl->tpl_vars['user']->value['username']) {?>
+                <?php if ($_smarty_tpl->tpl_vars['album']->value['user_fk'] == $_smarty_tpl->tpl_vars['user']->value['user_id']) {?>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/album/edit/?id=<?php echo $_smarty_tpl->tpl_vars['albumID']->value;?>
+/album/edit/?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['album_id'];?>
 ">
                         <button type="button" class="btn btn-secondary">
                             Edit
@@ -141,10 +141,10 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         </thead>
                         <tbody>
                             <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['album']->value['songs'], 'song', false, 'id');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['songs']->value, 'song');
 $_smarty_tpl->tpl_vars['song']->iteration = 0;
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['id']->value => $_smarty_tpl->tpl_vars['song']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['song']->value) {
 $_smarty_tpl->tpl_vars['song']->iteration++;
 $__foreach_song_0_saved = $_smarty_tpl->tpl_vars['song'];
 ?>
@@ -154,7 +154,7 @@ $__foreach_song_0_saved = $_smarty_tpl->tpl_vars['song'];
                                     <td>
                                         <button type="button" class="btn btn-link song" data-toggle="modal" data-target="#song<?php echo $_smarty_tpl->tpl_vars['song']->iteration;?>
 ">
-                                            <?php echo $_smarty_tpl->tpl_vars['song']->value;?>
+                                            <?php echo $_smarty_tpl->tpl_vars['song']->value['song_name'];?>
 
                                         </button>
                                     </td>
@@ -170,7 +170,7 @@ $__foreach_song_0_saved = $_smarty_tpl->tpl_vars['song'];
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel"><?php echo $_smarty_tpl->tpl_vars['song']->value;?>
+                                                <h5 class="modal-title" id="exampleModalLabel"><?php echo $_smarty_tpl->tpl_vars['song']->value['song_name'];?>
 </h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -179,19 +179,19 @@ $__foreach_song_0_saved = $_smarty_tpl->tpl_vars['song'];
                                             <div class="modal-body container">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <p> Added by: <?php echo $_smarty_tpl->tpl_vars['album']->value['user'];?>
+                                                        <p> Added by: <?php echo $_smarty_tpl->tpl_vars['album']->value['username'];?>
 <br>
-                                                            Album: <?php echo $_smarty_tpl->tpl_vars['album']->value['title'];?>
+                                                            Album: <?php echo $_smarty_tpl->tpl_vars['album']->value['album_name'];?>
 <br>
-                                                            Artist: <?php echo $_smarty_tpl->tpl_vars['album']->value['artist'];?>
+                                                            Artist: <?php echo $_smarty_tpl->tpl_vars['album']->value['artist_name'];?>
 <br>
-                                                            Year: <?php echo $_smarty_tpl->tpl_vars['album']->value['year'];?>
+                                                            Year: <?php echo $_smarty_tpl->tpl_vars['album']->value['release_year'];?>
 </p>
                                                     </div>
                                                     <div class="col-6">
                                                         <img src="<?php echo $_smarty_tpl->tpl_vars['WEB_URL']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['album']->value['cover'];?>
-" style="width:130px; float:right;">
+/images/album/<?php echo $_smarty_tpl->tpl_vars['album']->value['album_id'];?>
+.jpg" style="width:130px; float:right;">
                                                     </div>
                                                 </div>
                                             </div>

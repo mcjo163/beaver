@@ -2,34 +2,37 @@
 
 {extends file="layout.tpl"}
 
-{block name="title"} Beaver! | {$album['title']} {/block}
+{block name="title"} Beaver! | {$album['album_name']} {/block}
 
 {block name="content"}
 
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <img class="album-cover" src="{$WEB_URL}/{$album['cover']}">
+                <img class="album-cover" src="{$WEB_URL}/images/album/{$album['album_id']}.jpg">
             </div>
 
             <div class="col-8">
-                <h1 class="display-3">{$album['title']}</h1>
-                <h4>{$album['artist']}</h4>
-                <h4>{$album['year']}</h4>
-                <h4>Added by <a href="{$WEB_URL}/account/?id={$album['posterID']}">{$album['user']}</a></h4>
+                <h1 class="display-3">{$album['album_name']}</h1>
+                <h4>{$album['artist_name']}</h4>
+                <h4>{$album['release_year']}</h4>
+                <h4>Added by <a href="{$WEB_URL}/account/?id={$album['user_fk']}">{$album['username']}</a></h4>
 
                 <form>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="following" name="follow"
-                        {if in_array($album, $user['following'])} checked {/if}>
+                        {if in_array($album['album_id'], $favorite)} checked {/if}>
                         <label class="custom-control-label" for="following">
                             <strong>Follow this album</strong>
                         </label>
                     </div>
                 </form>
+{*                <div class="alert alert-danger">*}
+{*                    DISABLED EDITING UNTIL SESSION VARIABLES IN PLACE, PLEASE DELETE LATER*}
+{*                </div>*}
 
-                {if $album['user'] == $user['username']}
-                    <a href="{$WEB_URL}/album/edit/?id={$albumID}">
+                {if $album['user_fk'] == $user['user_id']}
+                    <a href="{$WEB_URL}/album/edit/?id={$album['album_id']}">
                         <button type="button" class="btn btn-secondary">
                             Edit
                         </button>
@@ -71,12 +74,12 @@
                         </tr>
                         </thead>
                         <tbody>
-                            {foreach $album['songs'] as $id=>$song}
+                            {foreach $songs as $song}
                                 <tr class="song-row">
                                     <th scope="row">{$song@iteration}</th>
                                     <td>
                                         <button type="button" class="btn btn-link song" data-toggle="modal" data-target="#song{$song@iteration}">
-                                            {$song}
+                                            {$song['song_name']}
                                         </button>
                                     </td>
                                     <td>
@@ -89,7 +92,7 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">{$song}</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">{$song['song_name']}</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -97,13 +100,13 @@
                                             <div class="modal-body container">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <p> Added by: {$album['user']}<br>
-                                                            Album: {$album['title']}<br>
-                                                            Artist: {$album['artist']}<br>
-                                                            Year: {$album['year']}</p>
+                                                        <p> Added by: {$album['username']}<br>
+                                                            Album: {$album['album_name']}<br>
+                                                            Artist: {$album['artist_name']}<br>
+                                                            Year: {$album['release_year']}</p>
                                                     </div>
                                                     <div class="col-6">
-                                                        <img src="{$WEB_URL}/{$album['cover']}" style="width:130px; float:right;">
+                                                        <img src="{$WEB_URL}/images/album/{$album['album_id']}.jpg" style="width:130px; float:right;">
                                                     </div>
                                                 </div>
                                             </div>

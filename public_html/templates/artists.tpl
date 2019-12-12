@@ -16,7 +16,7 @@
                 <h2>{$alpha}</h2>
                 <ul>
                     {foreach $a as $artist}
-                        <li><a href="{$WEB_URL}/artist/?a={$artist}" class="artist">{$artist}</a></li>
+                        <li><a href="{$WEB_URL}/artist/?a={$artist['artist_id']}" class="artist">{$artist['artist_name']}</a></li>
                     {/foreach}
                 </ul>
                 {if !$a@last}

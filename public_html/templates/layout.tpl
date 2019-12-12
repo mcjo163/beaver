@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{$WEB_URL}/css/albums.css">
     <link rel="stylesheet" href="{$WEB_URL}/css/artists.css">
     <link rel="stylesheet" href="{$WEB_URL}/css/account.css">
+    {block name="head_scripts"}{/block}
 
     <link rel="icon" href="{$WEB_URL}/images/beaver/favicon.ico" type="image">
     <title>{block name="title"}Beaver!{/block}</title>
@@ -46,7 +47,7 @@
                 </form>
                 <div class="btn-group px-sm-2">
                     <a href="{$WEB_URL}/album/add/" role="button" class="btn btn-outline-primary">Add Album</a>
-                    <a href="{$WEB_URL}/account/?id={$user['id']}" role="button" class="btn btn-outline-primary">Profile</a>
+                    <a href="{$WEB_URL}/account/?id={$user['user_id']}" role="button" class="btn btn-outline-primary">Profile</a>
                 </div>
             </div>
         </nav>
@@ -62,13 +63,13 @@
                     <div class="sidebar-sticky">
                         <h3>Favorites</h3>
                         <ul class="nav flex-column">
-                            {foreach $user['following'] as $id=>$album}
+                            {foreach $favorite as $album}
                                 <li class="nav-item">
-                                    <a class="following nav-link" href="{$WEB_URL}/album/?id={$id}">
-                                        <img src="{$WEB_URL}/{$album['cover']}" class="float-left">
+                                    <a class="following nav-link" href="{$WEB_URL}/album/?id={$album['album_id']}">
+                                        <img src="{$WEB_URL}/images/album/{$album['album_id']}.jpg" class="float-left">
                                         <div>
-                                            {$album['title']}<br>
-                                            {$album['artist']}
+                                            {$album['album_name']}<br>
+                                            {$album['artist_name']}
                                         </div>
                                     </a>
                                 </li>

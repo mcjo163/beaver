@@ -5,13 +5,6 @@
 {block name="title"}Beaver! | {$list_title} {/block}
 
 {block name="content"}
-    {$half = 0}
-    {if count($albums) is even}
-        {$half = intdiv(count($albums), 2)}
-    {else}
-        {$half = intdiv(count($albums), 2) + 1}
-    {/if}
-    {$cols = array_chunk($albums, $half, true)}
 
     <div class="row">
         <div class="col">
@@ -28,13 +21,13 @@
                 </tr>
                 <tr>
                     {$countToTwo = 0}
-                    {foreach $albums as $id=>$album}
+                    {foreach $albums as $album}
                         <td>
-                            <a class="following nav-link" href="{$WEB_URL}/album/?id={$id}">
-                                <img src="{$WEB_URL}/{$album['cover']}" class="float-left">
+                            <a class="following nav-link" href="{$WEB_URL}/album/?id={$album['album_id']}">
+                                <img src="{$WEB_URL}/images/album/{$album['album_id']}.jpg" class="float-left">
                                 <div>
-                                    {$album['title']}<br>
-                                    {$album['artist']}
+                                    {$album['album_name']}<br>
+                                    {$album['artist_name']}
                                 </div>
                             </a>
                         </td>
